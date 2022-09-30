@@ -9,7 +9,7 @@ WebDev.WebServer一共是两个文件，一个是WebDev.WebServer.exe，另一�
 WebDev.WebServer.exe在C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727目录下，如果安装Vs2008可以在C:\Program Files\Common Files\Microsoft Shared\DevServer\9.0目录下找到，而WebDev.WebHost.dll则不在那里，WebDev.WebHost.dll在安装时候作为全局程序集已经被编译到C:\windows\Assembly\XXXX....下，根据你安装的vs2005还是vs2008相关，一共有两个，一个是vs2005的，一个是vs2008的，它们与WebDev.WebServer.exe互相对应，获得方法是来到命令行窗口，使用原始的命令copy 目标文件 c:\得到，这个DLL也是纯.net的。
 获得这两个文件然后用reflector来反编译下，获得其源码，呵呵很方便吧，本身的源代码都不长。
 然后经过简单加工下使其能够编译运行，又远程访问试下，不行，提示什么？提示拒绝访问，但是说明连接上了，跟踪下代码来到以下设置：
-
+```
 private bool TryParseRequest()
         {
             this.Reset();
@@ -26,9 +26,10 @@ private bool TryParseRequest()
             }
             。。。。。。
 }
+```
 看到this._connection.IsLocal这个判断，摆明是故意的...，注释掉重编译，运行，再访问，OK。
 程序还有一个细节是WebDev.WebServer对执行站点目录采用Remoting远程代理方式来载入主机的。
-
+```
 if (host == null)
             {
                 lock (this._lockObject)
@@ -45,7 +46,7 @@ if (host == null)
                     }
                 }
             }
-
+```
 这就需要在站点目录的bin目录下面放入WebDev.WebHost.dll，（因为开发环境下已经配置到了全局程序集所以不需要），InitHost()这个方法是我自己加的，用于自动copy WebDev.WebHost.dll到站点目录下。
 项目源代码我已经发布了，用vs2008项目来编译的，可以在我的空间找到http://ocean.ys168.com找到，另外在使用的时候需要对WebDev.WebServer项目进行一下自己的配置。
 
