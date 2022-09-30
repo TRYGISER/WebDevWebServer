@@ -1,0 +1,7 @@
+Debug
+packages
+Release
+obj
+bin
+.idea
+.vs

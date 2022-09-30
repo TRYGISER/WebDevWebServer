@@ -1,0 +1,167 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>..\Debug\</OutputPath>
+    <Optimize>true</Optimize>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <OutputPath>bin\Release\</OutputPath>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <ProjectGuid>{AA352B30-3948-4830-B22D-AD9F7DE8B627}</ProjectGuid>
+    <PublishUrl>http://localhost/WebDev.WebServer/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Microsoft.VisualStudio.WebServer.WebServerApp</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GeneratedAssemblyInfo.cs" />
+    <Compile Include="Microsoft.VisualStudio.Core.WebServer.Utility.MruList.cs" />
+    <Compile Include="Microsoft.VisualStudio.Interop.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.SR.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.SRCategoryAttribute.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.SRDescriptionAttribute.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.Command.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.CommandLine.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.ICommandHandler.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.ICommandHandlerWithContext.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.ICommandManager.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.ImageUtility.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.IStatusBar.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.IToolWindowManager.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.MenuItemCommand.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.MxButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.MxCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.MxComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.MxContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.MxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.MxGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.MxLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.MxMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.MxRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.MxRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.MxTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.MxTheme.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.MxUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.ShowContextMenuEventArgs.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.ShowContextMenuEventHandler.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.TaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Microsoft.VisualStudio.WebServer.UIComponents.TrayIcon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Microsoft.VisualStudio.WebServer.Utility.AsyncTask.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.Utility.AsyncTaskManager.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.Utility.AsyncTaskMessage.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.Utility.AsyncTaskResultPostedEventArgs.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.Utility.AsyncTaskResultPostedEventHandler.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.Utility.Gac.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.WebServerApp.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebServer.WebServerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Microsoft.VisualStudio.WebServer.UIComponents.StockMenuItemGlyphs.bmp" />
+    <EmbeddedResource Include="Microsoft.VisualStudio.WebServer.WebServerForm.bmp" />
+    <EmbeddedResource Include="Microsoft.VisualStudio.WebServer.WebServerForm.ico" />
+    <EmbeddedResource Include="Microsoft.VisualStudio.WebServer.WebServerForm.resources" />
+    <EmbeddedResource Include="WebDevServer.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebDev.WebHost\WebDev.WebHost.csproj">
+      <Project>{0D82D0B5-E6BB-42D7-BE51-501E1D7BF59A}</Project>
+      <Name>WebDev.WebHost</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Condition="" Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
