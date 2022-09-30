@@ -48,6 +48,6 @@ if (host == null)
             }
 ```
 这就需要在站点目录的bin目录下面放入WebDev.WebHost.dll，（因为开发环境下已经配置到了全局程序集所以不需要），InitHost()这个方法是我自己加的，用于自动copy WebDev.WebHost.dll到站点目录下。
-项目源代码我已经发布了，用vs2008项目来编译的，可以在我的空间找到http://ocean.ys168.com找到，另外在使用的时候需要对WebDev.WebServer项目进行一下自己的配置。
+项目源代码我已经发布了，用vs2008项目来编译的，另外在使用的时候需要对WebDev.WebServer项目进行一下自己的配置。
 
 命令行参数里面请指向你自己要测试的站点目录。
